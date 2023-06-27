@@ -11,7 +11,6 @@ export const startNewNote = () => {
         // uid
         // Necesito el uid del user
 
-        console.log('StartNewNote')
 
         const newNote = {
             title: '',
@@ -25,9 +24,7 @@ export const startNewNote = () => {
         const setDocRes = await setDoc(newDoc, newNote);
 
         newNote.id = newDoc.id
-        
-        console.log(newDoc)
-        console.log(setDocRes)
+    
 
         //! dispatch
         dispatch( addNewEmptyNote( newNote ) )
